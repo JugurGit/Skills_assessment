@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Évaluation des compétences : Git, Python, Linux</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Évaluation des compétences</h1>
+    <p>Testez vos connaissances sur Git, Python et Linux</p>
+  </header>
+
+  <main>
+    <section>
+      <h2>Question</h2>
+      <p id="question">[Votre question ici]</p>
+    </section>
+
+    <form id="answer-form">
+      <label for="answer">Votre réponse</label>
+      <input type="text" id="answer">
+      <button type="submit">Évaluer la réponse</button>
+    </form>
+
+    <div id="feedback" style="display: none;">
+      <!-- Le message de feedback sera inséré ici -->
+    </div>
+
+    <button id="random-question">Question aléatoire</button>
+  </main>
+
+  <footer>
+    <p>&copy; 2023 - Jugurtha BOUDARENE / ESILV</p>
+  </footer>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      // Fonction pour charger une nouvelle question aléatoire
+      function loadRandomQuestion() {
+        // Récupérez la question aléatoire à partir de votre API ou de votre script Bash
+        // Remplacez le contenu de l'élément #question par la nouvelle question
+        $("#question").text("[Votre nouvelle question ici]");
+      }
+
+      // Fonction pour afficher le feedback
+      function showFeedback(isCorrect) {
+        const feedbackElement = $("#feedback");
+        feedbackElement.css("color", isCorrect ? "green" : "red");
+        feedbackElement.text(isCorrect ? "Bonne réponse !" : "Mauvaise réponse. Essayez encore.");
+        feedbackElement.show();
+      }
+
+      // Gestionnaire d'événements pour le bouton "Question aléatoire"
+      $("#random-question").on("click", function() {
+        loadRandomQuestion();
+      });
+
+      // Gestionnaire d'événements pour le formulaire de réponse
+      $("#answer-form").on("submit", function(event) {
+        event.preventDefault();
+        const userAnswer = $("#answer").val();
+
+        // Vérifiez la réponse de l'utilisateur avec votre API ou votre script Bash
+        // Remplacez la variable isCorrect par le résultat de la vérification
+        const isCorrect = false;
+
+        showFeedback(isCorrect);
+      });
+
+      // Chargez la première question aléatoire au chargement de la page
+      loadRandomQuestion();
+    });
+  </script>
+</body>
+</html>
