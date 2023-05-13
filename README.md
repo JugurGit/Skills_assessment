@@ -21,18 +21,19 @@ cd <repository_name>
 python3 -m venv venv
 source venv/bin/activate
 
-3. Installez les dépendances :
-pip install -r requirements.txt
+3. N'oubliez pas d'installer les dépendances requises (toutes présentes dans le fichier app_qcm.py)
 
 Utilisation
 
 1. Exécutez l'application :
-python app.py
+python app_qcm.py
 
-2. Accédez au site via l'adresse IP publique de l'instance sur le port choisi (par exemple, 80).
+2. Accédez au site via l'adresse IP publique de l'instance : http://13.36.166.94:8080/
 
-Contribution
-Les contributions sont les bienvenues ! N'hésitez pas à soumettre des issues ou des pull requests pour améliorer ce projet.
+Fonctionnalités : 
+- Passage d'un test sur linux/python/git sous forme de 4 questions sous timer de 15 secondes par question, un score sera affiché à la fin du questionnaire
+- Génération aléatoire de questions à partir d'une banque de questions disposé dans une base de données SQLite3
+- Portail Admin permettant de voir toutes les questions présentes dans la base de données, d'ajouter des questions, de les supprimer et de les modifier
 
 Licence
 Ce projet est sous licence MIT.
