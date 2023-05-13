@@ -1,0 +1,108 @@
+/* Réinitialisation des marges et des rembourrages */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Styles pour le body */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f5f5f5;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Styles pour le header */
+header {
+  background-color: #4c4c4c;
+  padding: 1.5rem 0;
+  text-align: center;
+}
+
+header h1,
+header p {
+  margin-bottom: 0.5rem;
+  color: #fff;
+}
+
+/* Styles pour le container principal */
+main {
+  width: 80%;
+  max-width: 960px;
+  margin: 2rem auto;
+  padding: 1rem;
+  background-color: #ffffff;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
+/* Styles pour les sections */
+section {
+  margin-bottom: 1.5rem;
+}
+
+/* Styles pour le formulaire de réponse */
+#answer-form {
+  display: flex;
+  flex-direction: column;
+}
+
+#answer-form label {
+  margin-bottom: 0.5rem;
+}
+
+#answer-form input {
+  margin-bottom: 1rem;
+  padding: 0.5rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+#answer-form button {
+  width: 50%;
+  margin: 0 auto;
+  padding: 0.5rem;
+  font-size: 1rem;
+  color: #fff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#answer-form button:hover {
+  background-color: #0056b3;
+}
+
+/* Styles pour le feedback */
+#feedback {
+  margin-top: 1.5rem;
+  font-weight: bold;
+}
+
+/* Styles pour le bouton "Question aléatoire" */
+#random-question {
+  width: 100%;
+  margin-top: 1.5rem;
+  padding: 0.5rem;
+  font-size: 1rem;
+  color: #fff;
+  background-color: #28a745;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#random-question:hover {
+  background-color: #1e7e34;
+}
+
+/* Styles pour le footer */
+footer {
+  background-color: #f5f5f5;
+  padding: 1rem 0;
+  text-align: center;
+}
+
+/* Ajoutez vos propres styles personnalisés ici */
